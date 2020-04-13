@@ -1,0 +1,5 @@
+feedparser
+pandas
+boto3
+nltk
+numpy

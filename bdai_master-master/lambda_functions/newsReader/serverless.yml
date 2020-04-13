@@ -1,0 +1,19 @@
+org: ethanlynagh
+service: newsReader
+
+provider:
+  name: aws
+  runtime: python3.7
+
+functions:
+  newsReader:
+    # Always <filename>.<function-to-execute>
+    handler: handler.lambda_handler
+
+plugins:
+  - serverless-python-requirements
+custom:
+  pythonRequirements:
+    usePipenv: false
+    # True if using numpy, pandas, or other package with C dependencies. Requires Docker installation
+    dockerizePip: true

@@ -1,0 +1,20 @@
+org: ethanlynagh
+service: alpaca-buy
+
+provider:
+  name: aws
+  runtime: python3.7
+
+functions:
+  alpaca-buy:
+    # Always <filename>.<function-to-execute>
+    handler: handler.buy
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    usePipenv: false
+    # True if using numpy, pandas, or other package with C dependencies. Requires Docker installation
+    dockerizePip: false

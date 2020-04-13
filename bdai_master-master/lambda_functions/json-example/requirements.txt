@@ -1,0 +1,7 @@
+simplejson
+boto3
+requests
+pandas
+botocore
+iexfinance
+datetime
